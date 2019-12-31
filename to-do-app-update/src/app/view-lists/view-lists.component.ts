@@ -12,6 +12,8 @@ export class ViewListsComponent implements OnInit
   todo=[];
   done=[];
   update_index=0;
+  temp_update_textbox_val="";
+  
   constructor() 
   {
 
@@ -70,9 +72,13 @@ export class ViewListsComponent implements OnInit
 
   finally_update=function()
   {
-    this.todo[this.update_index]=(<HTMLInputElement>document.getElementById("new_val")).value ;
-    localStorage.setItem('todo_list', JSON.stringify(this.todo));
-    (<HTMLInputElement>document.getElementById("new_val")).value = "";
+    this.temp_update_textbox_val = (<HTMLInputElement>document.getElementById("new_val")).value ;
+    if (this.temp_update_textbox_val != "") 
+    {
+      this.todo[this.update_index]= this.temp_update_textbox_val;
+      localStorage.setItem('todo_list', JSON.stringify(this.todo));
+      (<HTMLInputElement>document.getElementById("new_val")).value = "";
+    } 
   }
 
 }
