@@ -1,0 +1,67 @@
+.main
+{
+  text-align: center;
+  border: 2px solid black;
+  margin-top: 25px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 30px;
+}
+input
+{
+  padding: 15px 80px;
+}
+.button_style
+{
+  padding: 15px 30px;
+  background-color: #80002a;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:hover 
+{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.example-container 
+{
+  width: 250px;
+  max-width: 100%;
+  margin: 0 50px 555px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.list_block
+ {
+  min-height: 60px;
+  display: block;
+  overflow: hidden;
+}
+
+.list-items
+{
+  padding: 20px 10px;
+  border: solid 1px rgb(68, 66, 66);
+  box-sizing: border-box;
+  font-size: 15px;
+}
+span
+{
+    position: relative;
+    float: right;
+    margin-right: 280px;
+}
+
+.span_for_list
+{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    margin-right: 20px;
+}

@@ -1,0 +1,35 @@
+<div class="main" >
+  <div><br><br>
+    <input [(ngModel)] = "update_val" placeholder="update..." id="new_val"> &nbsp; &nbsp;
+    <button class="button_style" (click)="finally_update()">Update Task</button> <br><br><br>
+  </div><hr>
+  <div><br>
+    <div class="example-container">
+      <h2 style="color: #80002a;">To Do</h2>
+      <div
+        cdkDropList
+        #todoList="cdkDropList"
+        [cdkDropListData]="todo"
+        [cdkDropListConnectedTo]="[doneList]"
+        class="list_block"
+        (cdkDropListDropped)="ondrop($event)">
+        <div class="list-items" *ngFor="let item of todo; let index = index" cdkDrag>{{item}}
+          <button (click) = "removeItem(index)" class="span_for_list">x</button>
+          <button (click) = "update_task(index)" class="span_for_list">update</button>
+        </div>
+      </div>
+    </div>
+    <div class="example-container">
+      <h2 style="color: #80002a;">Done</h2>
+      <div
+        cdkDropList
+        #doneList="cdkDropList"
+        [cdkDropListData]="done"
+        [cdkDropListConnectedTo]="[todoList]"
+        class="list_block"
+        (cdkDropListDropped)="ondrop($event)">
+        <div class="list-items" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  </div>
+</div>
